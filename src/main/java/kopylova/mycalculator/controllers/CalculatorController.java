@@ -1,6 +1,5 @@
 package kopylova.mycalculator.controllers;
 
-import jakarta.validation.constraints.Pattern;
 import kopylova.mycalculator.services.CalculatorService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -21,12 +20,11 @@ public class CalculatorController {
     CalculatorService service;
 
     @GetMapping
-    public String calculator(
-            @RequestParam Long numberFirst,
-            @RequestParam @Pattern(regexp = "\\+-/\\*") String sign,
-            @RequestParam Long numberSecond
+    public Double webCalculator(
+            @RequestParam double numberFirst,
+            @RequestParam char sign,
+            @RequestParam double numberSecond
     ) {
         return service.calculator(numberFirst, sign, numberSecond);
     }
-
 }
