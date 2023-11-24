@@ -25,6 +25,6 @@ public class CalculatorController {
             @RequestParam char sign,
             @RequestParam double numberSecond
     ) {
-        return service.calculator(numberFirst, sign, numberSecond);
+        return service.webCalculator(numberFirst, sign, numberSecond);
     }
 }

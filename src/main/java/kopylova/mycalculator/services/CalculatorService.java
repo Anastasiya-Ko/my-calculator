@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService {
-    public double calculator(double numberFirst, char sign, double numberSecond) {
+    public double webCalculator(double numberFirst, char sign, double numberSecond) {
 
         return switch ((int) sign) {
             case 32 -> numberFirst + numberSecond;
